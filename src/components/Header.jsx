@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 import arrow from '../assets/images/icon-arrow.svg'
 
 const Header = ({ updateLocation, locationData }) => {
-  const [ipInput, setIpInput] = useState(''); // Stan dla inputu IP
+  const [ipInput, setIpInput] = useState(''); 
 
   const handleSearch = () => {
     if (ipInput) {
-      updateLocation(ipInput); // Wywołanie funkcji z App.js z wpisanym IP
-      setIpInput(''); // Czyszczenie inputu po wyszukaniu
+      updateLocation(ipInput); 
+      setIpInput(''); 
     }
   };
 

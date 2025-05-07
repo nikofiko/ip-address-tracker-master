@@ -3,11 +3,11 @@ import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
 const MapUpdater = ({ position }) => {
-  const map = useMap(); // Hook do dostępu do instancji mapy Leaflet
+  const map = useMap(); 
   useEffect(() => {
-    map.setView(position, 13); // Przesuń mapę do nowej pozycji z zoomem 13
-  }, [position, map]); // Wykonaj przy każdej zmianie position
-  return null; // Komponent pomocniczy nie renderuje nic
+    map.setView(position, 13); 
+  }, [position, map]); 
+  return null; 
 };
 
 const MapComponent = ({ position = [52.2297, 21.0122] }) => {

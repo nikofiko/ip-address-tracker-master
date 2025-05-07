@@ -16,16 +16,13 @@ function App() {
   });
 
   const updateLocation = (ip) => {
-    const apiKey = 'at_0WD4vZUekt8vOCjz6KULOPO9OddcJ';
-    console.log(`Wysyłam zapytanie dla IP: ${ip}`); // Debugowanie
+    const apiKey = '?';
     fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${ip}`)
       .then((response) => {
-        console.log('Status odpowiedzi:', response.status); // Debugowanie
         if (!response.ok) throw new Error(`Błąd API: ${response.status}`);
         return response.json();
       })
       .then((data) => {
-        console.log('Dane z API:', data); // Debugowanie
         if (data && data.location) {
           setLocationData({
             ip: data.ip || 'Brak danych',
