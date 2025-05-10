@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import arrow from '../assets/images/icon-arrow.svg'
+import bgImage from '../assets/images/pattern-bg-desktop.png';
 
 const Header = ({ updateLocation, locationData }) => {
   const [ipInput, setIpInput] = useState(''); 
@@ -12,7 +13,10 @@ const Header = ({ updateLocation, locationData }) => {
   };
 
   return (
-    <div className='relative font-rubik flex flex-col items-center bg-[url(src/assets/images/pattern-bg-desktop.png)] bg-no-repeat bg-cover h-72'>
+    <div 
+      style={{ backgroundImage: `url(${bgImage})` }}
+      className='relative font-rubik flex flex-col items-center bg-no-repeat bg-cover h-72'
+      >
       <h1 className='pt-11 text-3xl text-white font-medium tracking-wide'>IP Address Tracker</h1>
       <div className='flex pt-5 lg:pt-11'>
         <input 
